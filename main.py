@@ -225,12 +225,12 @@ for url in urls:
 # 合并所有对象中的行文本（去重，排序后拼接）
 version = datetime.now().strftime("%Y%m%d-%H-%M-%S") + ",url"
 all_lines = ["更新时间,#genre#"] + [version] + ['\n'] + \
-            ["🆕专享源1️⃣,#genre#"] + read_txt_to_array('主频道/♪专享源①.txt') + ['\n'] + \
-            ["🆕专享源2️⃣,#genre#"] + read_txt_to_array('主频道/♪专享源②.txt') + ['\n'] + \
-            ["🆕专享央视,#genre#"] + read_txt_to_array('主频道/♪优质央视.txt') + ['\n'] + \
-            ["🆕优质源,#genre#"] + read_txt_to_array('主频道/♪优质源.txt') + ['\n'] + \
-            ["🌐央视频道,#genre#"] + sorted(set(ys_lines)) + ['\n'] + \
-            ["📡卫视频道,#genre#"] + sorted(set(ws_lines)) + ['\n'] + \
+            ["专享源1️,#genre#"] + read_txt_to_array('主频道/♪专享源①.txt') + ['\n'] + \
+            ["专享源2️,#genre#"] + read_txt_to_array('主频道/♪专享源②.txt') + ['\n'] + \
+            ["专享央视,#genre#"] + read_txt_to_array('主频道/♪优质央视.txt') + ['\n'] + \
+            ["优质源,#genre#"] + read_txt_to_array('主频道/♪优质源.txt') + ['\n'] + \
+            ["央视频道,#genre#"] + sorted(set(ys_lines)) + ['\n'] + \
+            ["卫视频道,#genre#"] + sorted(set(ws_lines)) + ['\n'] + \
             ["上海频道,#genre#"] + sorted(set(sh_lines)) + ['\n'] + \
             ["体育频道,#genre#"] + sorted(set(ty_lines)) + ['\n'] + \
             ["电影频道,#genre#"] + sorted(set(dy_lines)) + ['\n'] + \
