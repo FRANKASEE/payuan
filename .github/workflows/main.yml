@@ -38,7 +38,7 @@ jobs:
           merged_output.txt
           others_output.txt
           
-    - name: Commit changes
+    - name: 提交更改
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
@@ -46,6 +46,7 @@ jobs:
           git add merged_output.m3u
           git add others_output.txt
           git commit -m ":tada:  AutoUpdate $(date +'%Y%m%d')"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/FRANKASEE/payuan.git HEAD:main
 
           current_datetime=$(date +"%Y%m%d_%H%M%S")
           cp merged_output.txt history/"${current_datetime}_merged_output.txt"
