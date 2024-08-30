@@ -331,7 +331,6 @@ all_lines =  ["更新时间,#genre#"] +[version] + ['\n'] +\
              ["纪录片,#genre#"] + sort_data(jlp_dictionary,set(correct_name_data(corrections_name,jlp_lines)))+ ['\n'] + \
              ["湖南频道,#genre#"] + sorted(set(correct_name_data(corrections_name,hn_lines))) + ['\n'] + \
 
-
 # 将合并后的文本写入文件
 output_file = "merged_output.txt"
 others_file = "others_output.txt"
