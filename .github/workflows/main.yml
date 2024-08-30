@@ -46,6 +46,11 @@ jobs:
           git add merged_output.m3u
           git add others_output.txt
           git commit -m ":tada:  AutoUpdate $(date +'%Y%m%d')"
+          
+    - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/FRANKASEE/payuan.git HEAD:main
 
           current_datetime=$(date +"%Y%m%d_%H%M%S")
