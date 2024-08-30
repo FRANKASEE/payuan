@@ -47,12 +47,6 @@ jobs:
           git add others_output.txt
           git commit -m ":tada:  AutoUpdate $(date +'%Y%m%d')"
           
-    - name: Push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: |
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/FRANKASEE/payuan.git HEAD:main
-
           current_datetime=$(date +"%Y%m%d_%H%M%S")
           cp merged_output.txt history/"${current_datetime}_merged_output.txt"
           cp others_output.txt history/"${current_datetime}_others_output.txt"
